@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html dir="ltr"
+  xmlns:og="http://ogp.me/ns#"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:dc="http://purl.org/dc/terms/"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:sioc="http://rdfs.org/sioc/ns#"
+  xmlns:sioct="http://rdfs.org/sioc/types#"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="../sites/default/files/favicon_13.png" type="image/png" />
+<meta name="description" content="DECODE is a fourteen-partner project which aims to understand new types of social value that are generated when people are given the ability to control and share personal data on their terms. It aims to create tools that allow people to flexibly decide who is able to access personal data, and for what purposes" />
+<meta name="generator" content="Drupal 7 (http://drupal.org)" />
+<link rel="canonical" href="decode-technical-explainer.html" />
+<link rel="shortlink" href="decode-technical-explainer.html" />
+<meta property="og:site_name" content="DECODE" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="DECODE: A technical explainer" />
+<meta property="og:url" content="https://www.decodeproject.eu/blog/decode-technical-explainer" />
+<meta property="og:description" content="DECODE is a fourteen-partner project which aims to understand new types of social value that are generated when people are given the ability to control and share personal data on their terms. It aims to create tools that allow people to flexibly decide who is able to access personal data, and for what purposes" />
+<meta property="og:updated_time" content="2019-05-17T12:46:04+01:00" />
+<meta property="og:image" content="http://www.decodeproject.eu/sites/default/files/styles/article_main_image/public/people-large%402x_0.png" />
+<meta property="og:image:url" content="http://www.decodeproject.eu/sites/default/files/styles/article_main_image/public/people-large%402x_0.png" />
+<meta property="og:image:secure_url" content="https://www.decodeproject.eu/sites/default/files/styles/article_main_image/public/people-large%402x_0.png" />
+<meta property="og:image:type" content="image/png" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="DECODE: A technical explainer" />
+<meta name="twitter:url" content="https://www.decodeproject.eu/blog/decode-technical-explainer" />
+<meta name="twitter:description" content="DECODE is a fourteen-partner project which aims to understand new types of social value that are generated when people are given the ability to control and share personal data on their terms. It aims" />
+<meta property="article:published_time" content="2018-12-07T10:38:23+00:00" />
+<meta property="article:modified_time" content="2019-05-17T12:46:04+01:00" />
+<meta name="dcterms.title" content="DECODE: A technical explainer" />
+<meta name="dcterms.creator" content="theo.bass@nesta.org.uk" />
+<meta name="dcterms.description" content="DECODE is a fourteen-partner project which aims to understand new types of social value that are generated when people are given the ability to control and share personal data on their terms. It aims to create tools that allow people to flexibly decide who is able to access personal data, and for what purposes" />
+<meta name="dcterms.date" content="2018-12-07T10:38+00:00" />
+<meta name="dcterms.type" content="Text" />
+<meta name="dcterms.format" content="text/html" />
+<meta name="dcterms.identifier" content="https://www.decodeproject.eu/blog/decode-technical-explainer" />
+  <title>DECODE: A technical explainer | DECODE</title>
+  <link type="text/css" rel="stylesheet" href="../sites/default/files/css/css_xE-rWrJf-fncB6ztZfd2huxqgxu4WO-qwma6Xer30m4.css" media="all" />
+<link type="text/css" rel="stylesheet" href="../sites/default/files/css/css_xeScBveY6rZxSm9OmEpbcyqtCL3KJH4Sn9gI8aKQH6I.css" media="all" />
+<link type="text/css" rel="stylesheet" href="../sites/default/files/css/css_okgKBIU4CAVLBQ8WL9ju58gvDdiBuqi4heaRRHcTYP0.css" media="all" />
+<style type="text/css" media="all">
+<!--/*--><![CDATA[/*><!--*/
+.addtoany_list.a2a_target{display:block;text-align:center;margin-top:1em;}
+
+/*]]>*/-->
+</style>
+<link type="text/css" rel="stylesheet" href="../sites/default/files/css/css_RVI95kbvU3ZEyQZTWpnpQ3FT6vVhhIo_ngc_c93FjNs.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500" media="all" />
+<link type="text/css" rel="stylesheet" href="../sites/default/files/css/css_vXvt0DBzVlIf-3cs_aiG0yLH6yT_ZSWmpec_qmUQYBE.css" media="all" />
+<link type="text/css" rel="stylesheet" href="../sites/default/files/css/css_FU8o5qSlzu0ob5FWyJ2aZa0IlDPx0rktUUmAbSxIXiw.css" media="all" />
+  <script type="text/javascript" src="../sites/default/files/js/js_ypadrG4kz9-JBpNOXmgjyVozLCJG_1RP3Ig-iqWR8n0.js"></script>
+<script type="text/javascript" src="../sites/default/files/js/js_TVTqjz8JHRb2KK9hlzuk0YsjzD013dKyYX_OTz-2VXU.js"></script>
+<script type="text/javascript" src="../sites/default/files/js/js_i9-mZxF1wrIj_pHo8CcygMfG3cz35Mlm6odAjzL19fk.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+var _paq = _paq || [];(function(){var u=(("https:" == document.location.protocol) ? "https://www.decodeproject.eu/piwik/" : "http://www.decodeproject.eu/piwik/");_paq.push(["setSiteId", "1"]);_paq.push(["setTrackerUrl", u+"piwik.php"]);_paq.push(["setDoNotTrack", 1]);_paq.push(["trackPageView"]);_paq.push(["setIgnoreClasses", ["no-tracking","colorbox"]]);_paq.push(["enableLinkTracking"]);var d=document,g=d.createElement("script"),s=d.getElementsByTagName("script")[0];g.type="text/javascript";g.defer=true;g.async=true;g.src=u+"piwik.js";s.parentNode.insertBefore(g,s);})();
+//--><!]]>
+</script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+window.a2a_config=window.a2a_config||{};window.da2a={done:false,html_done:false,script_ready:false,script_load:function(){var a=document.createElement('script'),s=document.getElementsByTagName('script')[0];a.type='text/javascript';a.async=true;a.src='https://static.addtoany.com/menu/page.js';s.parentNode.insertBefore(a,s);da2a.script_load=function(){};},script_onready:function(){da2a.script_ready=true;if(da2a.html_done)da2a.init();},init:function(){for(var i=0,el,target,targets=da2a.targets,length=targets.length;i<length;i++){el=document.getElementById('da2a_'+(i+1));target=targets[i];a2a_config.linkname=target.title;a2a_config.linkurl=target.url;if(el){a2a.init('page',{target:el});el.id='';}da2a.done=true;}da2a.targets=[];}};(function ($){Drupal.behaviors.addToAny = {attach: function (context, settings) {if (context !== document && window.da2a) {if(da2a.script_ready)a2a.init_all();da2a.script_load();}}}})(jQuery);a2a_config.callbacks=a2a_config.callbacks||[];a2a_config.callbacks.push({ready:da2a.script_onready});a2a_config.overlays=a2a_config.overlays||[];a2a_config.templates=a2a_config.templates||{};
+//--><!]]>
+</script>
+<script type="text/javascript" src="../sites/default/files/js/js_kb9AMFOJk8ALipMO9hfI2Xld92MCg5LBQTVr-GMkqy0.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"marmelo","theme_token":"Hfa4T-wDVB0d_frS0ZKl_QyoX-bzvKUr73a_gf3XR1o","js":{"0":1,"sites\/all\/modules\/eu_cookie_compliance\/js\/eu_cookie_compliance.js":1,"1":1,"sites\/all\/modules\/jquery_update\/replace\/jquery\/1.10\/jquery.min.js":1,"misc\/jquery-extend-3.4.0.js":1,"misc\/jquery-html-prefilter-3.5.0-backport.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/modules\/eu_cookie_compliance\/js\/jquery.cookie-1.4.1.min.js":1,"sites\/all\/modules\/matomo\/matomo.js":1,"2":1,"3":1,"sites\/all\/themes\/marmelo_base\/js\/vendor\/DecodeDrawer.js":1,"sites\/all\/themes\/marmelo_base\/js\/vendor\/MarmeloSlide.js":1,"sites\/all\/themes\/marmelo_base\/js\/vendor\/raf-polyfill.js":1,"sites\/all\/themes\/marmelo_base\/js\/vendor\/readmore.js":1,"sites\/all\/themes\/marmelo_base\/js\/vendor\/jquery.scrollTo.min.js":1,"sites\/all\/themes\/marmelo_base\/js\/canvas.js":1,"sites\/all\/themes\/marmelo_base\/js\/theme.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"modules\/field\/theme\/field.css":1,"modules\/node\/node.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/views\/css\/views.css":1,"sites\/all\/modules\/media\/modules\/media_wysiwyg\/css\/media_wysiwyg.base.css":1,"sites\/all\/modules\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/eu_cookie_compliance\/css\/eu_cookie_compliance.css":1,"0":1,"sites\/all\/modules\/date\/date_api\/date.css":1,"sites\/all\/modules\/addtoany\/addtoany.css":1,"https:\/\/fonts.googleapis.com\/css?family=Montserrat:300,400,500":1,"public:\/\/ctools\/css\/f623fca947872ccd2ba0c8065fd73eb4.css":1,"sites\/all\/themes\/marmelo_base\/css\/vendor\/hamburger.css":1,"sites\/all\/themes\/marmelo_base\/css\/styles.css":1}},"eu_cookie_compliance":{"cookie_policy_version":"1.0.0","popup_enabled":1,"popup_agreed_enabled":0,"popup_hide_agreed":0,"popup_clicking_confirmation":1,"popup_scrolling_confirmation":0,"popup_html_info":"\u003Cdiv class=\u0022eu-cookie-compliance-banner eu-cookie-compliance-banner-info eu-cookie-compliance-banner--default\u0022\u003E\n  \u003Cdiv class=\u0022popup-content info\u0022\u003E\n    \u003Cdiv id=\u0022popup-text\u0022\u003E\n      \u003Ch2\u003EWe use cookies on this site to enhance your user experience\u003C\/h2\u003E\n\u003Cp\u003EBy clicking any link on this page you are giving your consent for us to set cookies.\u003C\/p\u003E\n              \u003Cbutton type=\u0022button\u0022 class=\u0022find-more-button eu-cookie-compliance-more-button\u0022\u003ENo, give me more info\u003C\/button\u003E\n          \u003C\/div\u003E\n    \n    \u003Cdiv id=\u0022popup-buttons\u0022 class=\u0022\u0022\u003E\n      \u003Cbutton type=\u0022button\u0022 class=\u0022agree-button eu-cookie-compliance-default-button\u0022\u003EOK, I agree\u003C\/button\u003E\n          \u003C\/div\u003E\n  \u003C\/div\u003E\n\u003C\/div\u003E","use_mobile_message":false,"mobile_popup_html_info":"\u003Cdiv class=\u0022eu-cookie-compliance-banner eu-cookie-compliance-banner-info eu-cookie-compliance-banner--default\u0022\u003E\n  \u003Cdiv class=\u0022popup-content info\u0022\u003E\n    \u003Cdiv id=\u0022popup-text\u0022\u003E\n      \u003Ch2\u003EWe use cookies on this site to enhance your user experience\u003C\/h2\u003E\n\u003Cp\u003EBy tapping the Accept button, you agree to us doing so.\u003C\/p\u003E\n              \u003Cbutton type=\u0022button\u0022 class=\u0022find-more-button eu-cookie-compliance-more-button\u0022\u003ENo, give me more info\u003C\/button\u003E\n          \u003C\/div\u003E\n    \n    \u003Cdiv id=\u0022popup-buttons\u0022 class=\u0022\u0022\u003E\n      \u003Cbutton type=\u0022button\u0022 class=\u0022agree-button eu-cookie-compliance-default-button\u0022\u003EOK, I agree\u003C\/button\u003E\n          \u003C\/div\u003E\n  \u003C\/div\u003E\n\u003C\/div\u003E\n","mobile_breakpoint":768,"popup_html_agreed":"\u003Cdiv\u003E\n  \u003Cdiv class=\u0022popup-content agreed\u0022\u003E\n    \u003Cdiv id=\u0022popup-text\u0022\u003E\n      \u003Ch2\u003EThank you for accepting cookies\u003C\/h2\u003E\n\u003Cp\u003EYou can now hide this message or find out more about cookies.\u003C\/p\u003E\n    \u003C\/div\u003E\n    \u003Cdiv id=\u0022popup-buttons\u0022\u003E\n      \u003Cbutton type=\u0022button\u0022 class=\u0022hide-popup-button eu-cookie-compliance-hide-button\u0022\u003EHide\u003C\/button\u003E\n              \u003Cbutton type=\u0022button\u0022 class=\u0022find-more-button eu-cookie-compliance-more-button-thank-you\u0022 \u003EMore info\u003C\/button\u003E\n          \u003C\/div\u003E\n  \u003C\/div\u003E\n\u003C\/div\u003E","popup_use_bare_css":false,"popup_height":"auto","popup_width":"100%","popup_delay":1000,"popup_link":"\/privacy-policy","popup_link_new_window":1,"popup_position":null,"fixed_top_position":true,"popup_language":"en","store_consent":false,"better_support_for_screen_readers":0,"reload_page":0,"domain":"","domain_all_sites":null,"popup_eu_only_js":0,"cookie_lifetime":100,"cookie_session":false,"disagree_do_not_show_popup":0,"method":"default","allowed_cookies":"","withdraw_markup":"\u003Cbutton type=\u0022button\u0022 class=\u0022eu-cookie-withdraw-tab\u0022\u003EPrivacy settings\u003C\/button\u003E\n\u003Cdiv class=\u0022eu-cookie-withdraw-banner\u0022\u003E\n  \u003Cdiv class=\u0022popup-content info\u0022\u003E\n    \u003Cdiv id=\u0022popup-text\u0022\u003E\n      \u003Ch2\u003EWe use cookies on this site to enhance your user experience\u003C\/h2\u003E\n\u003Cp\u003EYou have given your consent for us to set cookies.\u003C\/p\u003E\n    \u003C\/div\u003E\n    \u003Cdiv id=\u0022popup-buttons\u0022\u003E\n      \u003Cbutton type=\u0022button\u0022 class=\u0022eu-cookie-withdraw-button\u0022\u003EWithdraw consent\u003C\/button\u003E\n    \u003C\/div\u003E\n  \u003C\/div\u003E\n\u003C\/div\u003E\n","withdraw_enabled":false,"withdraw_button_on_info_popup":false,"cookie_categories":[],"cookie_categories_details":[],"enable_save_preferences_button":true,"cookie_name":"","containing_element":"body","automatic_cookies_removal":true},"matomo":{"trackMailto":1}});
+//--><!]]>
+</script>
+  <meta name="viewport" content="width=device-width" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+</head>
+<body class="html not-front not-logged-in no-sidebars page-node page-node- page-node-261 node-type-article" >
+
+  <canvas id="background-canvas" width="100%" height="100%"> </canvas>
+
+  <button class="hamburger hamburger--vortex" type="button">
+    <span class="hamburger-box">
+      <span class="hamburger-inner"></span>
+    </span>
+  </button>
+
+  <div id="skip-link">
+    <a href="decode-technical-explainer.html#main-content" class="element-invisible element-focusable">Skip to main content</a>
+  </div>
+
+
+    
+  <div id="page-wrapper"><div id="page">
+
+    <header><div class="section clearfix">
+
+              <a href="../index.html" title="Home" rel="home" id="logo">
+          <img src="../sites/all/themes/marmelo_base/img/logo.svg" alt="Home" />
+        </a>
+      
+      
+      
+        
+      <nav id='navigation'>
+        
+          <div class="region region-navigation">
+    <div id="block-menu-meganav-menu-meganav" class="block block-menu-meganav">
+
+    
+  <div class="content">
+    <div class='meganav'><ul class='menu'><li class='menu-item-1'><a href="../what-decode.html">The project</a><ul class='menu children_5'><a href='../what-decode.html'><li class=''><h5 class='title'>What is DECODE?</h5><p class='summary'>Find out more about the project and the technology behind it</p></li><a href='../team.html'><li class=''><h5 class='title'>The team</h5><p class='summary'>Meet the DECODE team</p></li><a href='../partners.html'><li class=''><h5 class='title'>The partners</h5><p class='summary'><p>DECODE is a consortium of 15&nbsp;organisations from across the European Union</p></p></li><a href='../have-more-questions.html'><li class=''><h5 class='title'>Have more questions?</h5><p class='summary'>Definitions and other useful information about the project</p></li><a href='../decode-advisory-group.html'><li class=''><h5 class='title'>DECODE Advisory Group</h5><p class='summary'><p>The DECODE Advisory Group kicks off in&nbsp;January 2018 after the second annual General Assembly</p></p></li></ul></li><li class='menu-item-2'><a href="../get-involved.html">Contact Us</a><ul class='menu children_5'><a href='../events.html'><li class=''><h5 class='title'>Events</h5><p class='summary'><p>Information about the events DECODE held&nbsp;across Europe</p></p></li><a href='../pilots.html'><li class=''><h5 class='title'>Pilots</h5><p class='summary'>Find out more about what happened in DECODE's pilots in Amsterdam or Barcelona</p></li><a href='../developers.html'><li class=''><h5 class='title'>For developers</h5><p class='summary'><p>Tools, code repositories and more</p></p></li><a href='../contact-us.html'><li class=''><h5 class='title'>Contact us</h5><p class='summary'>Get in touch</p></li></ul></li><li class='menu-item-3'><a href="../project-timeline.html">Our progress</a><ul class='menu children_6'><a href='../project-timeline.html'><li class=''><h5 class='title'>Project timeline</h5><p class='summary'><p>Overview of our progress to date and what is to come</p></p></li><a href='../decode-media.html'><li class=''><h5 class='title'>News</h5><p class='summary'><p>Read media and news articles about DECODE</p></p></li><a href='../blog.html'><li class=''><h5 class='title'>Blog</h5><p class='summary'>Thoughts from the DECODE team</p></li><a href='../deliverables.html'><li class=''><h5 class='title'>Project Deliverables</h5><p class='summary'>Read our project deliverables and other outputs about DECODE</p></li><a href='../resources.html'><li class=''><h5 class='title'>Resources</h5><p class='summary'><p>Videos, toolkits, comms resources and more from the DECODE project</p></p></li></ul></li></li></li><li class='menu-item-6'><a href="../events/beyond-surveillance-capitalism-reclaiming-digital-sovereignty.html">Symposium 2018</a><ul class='menu children_4'><a href='../events/beyond-surveillance-capitalism-reclaiming-digital-sovereignty.html'><li class=''><h5 class='title'>Overview</h5><p class='summary'>How can technology facilitate the transition from surveillance capitalism to an alternative project?</p></li><a href='../events/beyond-surveillance-capitalism-reclaiming-digital-sovereignty/speakers.html'><li class=''><h5 class='title'>Speakers</h5><p class='summary'>Who's speaking?</p></li><a href='../events/beyond-surveillance-capitalism-reclaiming-digital-sovereignty/media.html'><li class=''><h5 class='title'>Media</h5><p class='summary'>Explore videos, photos and other content from the event</p></li><a href='../events/beyond-surveillance-capitalism-reclaiming-digital-sovereignty/getting-here.html'><li class=''><h5 class='title'>Getting here</h5><p class='summary'>Getting to our venue, the Barcelona Contemporary Culture Centre</p></li></ul></li><li class='menu-item-7'><a href="../events/our-data-our-future-radical-tech-democratic-digital-society.html">Symposium 2019</a><ul class='menu children_3'><a href='../events/our-data-our-future-radical-tech-democratic-digital-society.html'><li class=''><h5 class='title'>Overview</h5><p class='summary'><p>Overview of the 2019 DECODE Symposium</p></p></li><a href='../events/speakers.html'><li class=''><h5 class='title'>Speakers</h5><p class='summary'><p>Who&#39;s speaking?</p></p></li><a href='https://decodeproject.eu/events/media'><li class=''><h5 class='title'>Media</h5><p class='summary'><p>Who&#39;s speaking?</p></p></li></ul></li></ul></div><div class='overlay'></div>  </div>
+</div>
+  </div>
+
+      </nav> <!-- /.section, /#navigation -->
+          
+
+    </div></header> <!-- /.section, /#header -->
+
+
+          <div id="breadcrumb"><h2 class="element-invisible">You are here</h2><div class="breadcrumb"><a href="../index.html">Home</a></div></div>
+    
+    
+    <div id="main-wrapper">
+        <div id="main" class="clearfix">
+
+            <section id="content" class="column"><div class="section">
+                                <a id="main-content"></a>
+                                <h1 class="title" id="page-title">DECODE: A technical explainer </h1>                                <div class="tabs"></div>                                                  <div class="region region-content">
+    <div id="block-system-main" class="block block-system">
+
+    
+  <div class="content">
+    <article id="node-261" class="node node-article clearfix" about="/blog/decode-technical-explainer" typeof="sioc:Item foaf:Document">
+
+  
+      <span property="dc:title" content="DECODE: A technical explainer " class="rdf-meta element-hidden"></span>
+  
+  <div class="content">
+    <div class="field field-name-field-author field-type-text field-label-hidden"><div class="field-items"><div class="field-item even">Theo Bass, Paulus Meessen</div></div></div><div class="field field-name-field-publication-date field-type-datetime field-label-hidden"><div class="field-items"><div class="field-item even"><span class="date-display-single" property="dc:date" datatype="xsd:dateTime" content="2018-12-07T00:00:00+00:00">Friday 7th December 2018</span></div></div></div><span class="a2a_kit a2a_target addtoany_list" id="da2a_1">
+      <a class="a2a_button_facebook a2a_counter"></a>
+<a class="a2a_button_twitter a2a_counter"></a>
+<a class="a2a_button_linkedin a2a_counter"></a>
+<a class="a2a_button_tumblr a2a_counter"></a>
+<a class="a2a_button_reddit"></a>
+<a class="a2a_button_slashdot"></a>
+      
+      
+    </span>
+    <script type="text/javascript">
+<!--//--><![CDATA[//><!--
+if(window.da2a)da2a.script_load();
+//--><!]]>
+</script><div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><h3 dir="ltr">Introduction</h3>
+<p dir="ltr">Most data on the internet is personal data - it tells us something about people’s behaviours, habits and preferences. Over the past several years, power has been consolidated among a small number of internet firms on a business model that relies substantially on how they extract and sell this information.</p>
+<p dir="ltr">Meanwhile long terms and conditions confuse people about how these companies operate, and a lack of transparency and accountability over who gains value from personal data has lead to misuse from <a href="https://www.nytimes.com/interactive/2017/04/02/technology/uber-drivers-psychological-tricks.html">large-scale manipulation</a> to <a href="https://www.theguardian.com/news/series/cambridge-analytica-files">election-tampering</a>.</p>
+<p dir="ltr">DECODE is a fourteen-partner project which aims to understand new types of social value that are generated when people are given the ability to control and share personal data on their terms. It aims to create tools that allow people to flexibly decide who is able to access personal data, and for what purposes.</p>
+<div>
+<h3>Context</h3>
+</div>
+<p>Efforts to give people more control over personal data are not new. DECODE’s origins are varied, including cryptography and privacy research; Vendor Relationship Management tools (some of the first projects to understand the need for individuals to decide which data external parties could access); through to the web science movement.</p>
+<div>
+<p dir="ltr">But recently a range of technologies have emerged -  from new techniques enabling<a href="https://www.technologyreview.com/lists/technologies/2018/"> ‘perfect privacy’</a> to distributed computing solutions - that are creating an exciting new wave of innovation that have the potential to put power directly into the hands of individuals.</p>
+<p dir="ltr">DECODE’s primary aim is to try and take some of these technologies, translate them into user-friendly tools, and test them with real people and communities.</p>
+<p dir="ltr">This blog provides a summary of the technical aspects of DECODE and what makes it different to other projects, as outlined in the<a href="https://decodeproject.github.io/whitepaper/"> DECODE Whitepaper</a>. It outlines the key features of the DECODE technology under four broad principles:</p>
+<div>
+<h4 dir="ltr">1. Free and open source</h4>
+<p dir="ltr">DECODE strongly believes that technologies delivering public benefit should strive to be transparent by design. What’s more, we believe that it’s harder to offer users strong privacy protection without making the underlying technology fully open to inspection and improvement (two of DECODE's partners, the Dyne.org foundation and Waag are promoters of the <a href="https://publiccode.eu/">PUBLIC MONEY/ PUBLIC CODE</a> initiative).</p>
+<p dir="ltr">All work produced by the project will be published as free and open source according to the licenses approved by the Free Software Foundation’s European and emerging open hardware standards. Like the original foundations for the Web, we also hope that the openness of the platform will enable greater innovation and participation in DECODE activities.</p>
+<p dir="ltr">DECODE is being built upon the solid foundations of existing proven software wherever appropriate. For instance, DECODE’s operations will be running on the well known and solid Debian OS (a variant of Linux).</p>
+<p dir="ltr">DECODE also brings a number of established open source projects and existing privacy innovations together, including a distributed ledger platform called Chainspace, and a ‘wallet app’ that uses Attribute-Based Credentials, implemented with the help of University College London and Radboud University in the Netherlands. We describe what these technologies are, and how they will work specifically in DECODE, in more detail below.</p>
+<h4 dir="ltr">2. Decentralised </h4>
+<p dir="ltr">Innovation with personal data and privacy is currently increasing exponentially. But most of these emerging projects operate as specific ‘platforms’ or companies with centralised structures and rules. In contrast, DECODE technology is best thought of as a set of open standards and protocols which can be integrated into any digital application or service.</p>
+<p dir="ltr">DECODE also relies on new decentralising tools, such as distributed ledger technology (DLT). Like the founding protocols of the internet and World Wide Web, DLTs can be thought of as a new type of shared global network, which no single actor governs or owns. Rules of transparency, auditability and individual control can be embedded in the network design. Some have said this technology will lead to ‘<a href="https://medium.com/@matteozago/why-the-web-3-0-matters-and-you-should-know-about-it-a5851d63c949">Web 3.0</a>’, and an enabler for a fairer, less extractive online economy.</p>
+<p dir="ltr">In DECODE, all operations will be processed, validated and updated on a distributed ledger called <a href="https://chainspace.io/">Chainspace</a>, which is designed to provide full auditability of transactions. Another technology called <a href="https://zenroom.dyne.org/">Zenroom</a> provides the cryptography and the sensitive data manipulation for DECODE. Both of these enable all computation to be performed by a distributed network of computers (known as ‘nodes’); avoiding reliance on any central organisation or API.</p>
+<p dir="ltr">Achieving transparency through decentralisation, while upholding individual privacy of people using the network, might feel like two competing aims. However, thanks to <a href="https://arxiv.org/abs/1802.07344">advances in modern cryptography</a>, it is possible to ensure that operations were correctly performed on a ledger without divulging private user data – a family of techniques known as zero-knowledge. This brings us to our third defining principle.</p>
+<p dir="ltr">3. Privacy-enhancing</p>
+<p dir="ltr">DECODE is designed with privacy in mind from<a href="privacy-design-requirements-decode.html"> the ground up</a>. One of the key components that enable this is a technology known as Attribute Based Credentials (ABCs). ABCs are the core mechanism for how participants express their identity on the DECODE network.</p>
+<h5><em>Authenticated but anonymous</em></h5>
+<p>In simple terms, personal data on DECODE will be defined in terms of ‘attributes’.</p>
+<p dir="ltr">For example, a participant may have the attribute that they are ‘over 18’ or ‘a resident of the city of Barcelona’. A person’s digital identity on DECODE will be little more than a collection of attributes.</p>
+<p dir="ltr">Attributes can be authenticated by an issuing party (e.g. a City Government) and then cryptographically bound into a 'credential'. Once these credentials have been issued they can be stored in a secure digital wallet on the user’s phone, and then used without any intervention of that issuing party anymore (users only need to interact with the issuing party once).</p>
+<p dir="ltr">After that, attributes or bundles of attributes can be used to express certain ‘entitlements’, which are defined by different parties in the network as conditions for accessing a service. For example, an entitlement for giving young people free access to the digital collection of the local library may be that they posses a credential by the City Government that contains the attribute 'under 18'.</p>
+<p dir="ltr">The upshot is that DECODE will enable internet services to offer a whole range of personalised applications while greatly minimising the amount of sensitive information that needs to be collected and sent across the internet.</p>
+<h5><em>Context-dependent access</em></h5>
+<p>Attributes have other useful features. They can define a range of things, like the specific organisation a person sits within, their role, their location, their department, and more.</p>
+<p dir="ltr">When it comes to actually sharing data, we can create mechanisms that allow individual participants to declare and enforce agreements about how data is accessed using these attributes (Attribute-Based Encryption).</p>
+<p dir="ltr">For example, a user may be able to encrypt personal data and say that this information can only be unlocked by the people that possess the specific attributes that they choose: such as only by certain people or organisations (‘only medical professionals’), or in specific locations (‘only within my neighbourhood’).</p>
+<p dir="ltr">This is more experimental and still only a research topic within DECODE. Nonetheless it helps to describe where we would like the technology to lead.</p>
+<h4 dir="ltr">4. User friendly</h4>
+<p dir="ltr">One of the key objectives of DECODE is to experiment with how some of these complex technologies can be translated into user-friendly tools.</p>
+<p dir="ltr">The main method of communication through DECODE applications will be a language known as ‘Smart Rules’ which are the front-end expressions of Attribute-Based Credentials described above.</p>
+<p dir="ltr">Smart Rules will be defined in a universally recognisable language that applications across the network can understand. At a basic level, Smart Rules will be designed to allow users or organisations to express what happens to personal data - imagine a simple user-interface that lets users specify how data should be used, where, when and for what purpose.</p>
+<div><center><img alt="" src="../sites/default/files/imagine&#32;sc2.png" style="width: 250px; height: 252px;" /></center></div>
+<div><center><em>Smart Rules, imagined scenarios</em></center></div>
+<div> </div>
+<div>
+<p dir="ltr">Our ultimate vision is to create something akin to a set of creative commons licenses for personal data, making people not companies the ones who set fine-grained terms of use.</p>
+<p dir="ltr">A core part of the DECODE pilots, starting in October 2018, will be to implement, test, and improve the user-design of Smart Rules in collaboration with communities in each of our partner cities. You can read a full list of the DECODE project pilots <a href="../pilots.html">on our website</a></p>
+<h2 dir="ltr">New 'commons' for data</h2>
+<p dir="ltr">By giving people secure, and flexible means to share personal data on their terms, DECODE aims to enable a new generation of peer-to-peer digital applications. We imagine new platforms that will allow more democratic forms of control, where people and communities are able to leverage the collective value of their data.</p>
+<p dir="ltr">For example, one DECODE pilot will give citizens of Barcelona a safer means to engage in data-driven activism. People will be able to collect and safely share noise pollution data from inside and outside their homes (noise pollution is a problem that blights the lives of many people living in the inner city in Barcelona). Local people will be given <a href="https://www.nesta.org.uk/feature/10-people-centred-smart-city-initiatives/smart-citizen-kit/">Smart Citizen Kits</a> and will be given means to visualise the data on user-friendly <a href="barcelonanow-“-web-conference-2018”.html">dashboards</a>, anonymise that data, and share it with their neighbours or directly with the city government.</p>
+<h2 dir="ltr">DECODE Whitepaper</h2>
+<p dir="ltr">The Whitepaper is DECODE’s first comprehensive outline for what a more decentralised, fairer data sharing protocol on the Internet should look like. You can read the full document <a href="https://decodeproject.github.io/whitepaper/">here</a>. At a higher level, the features outlined above act as broad principles which we think should underpin a progressive future vision for the internet.</p>
+<p>Of course, we are open to comments and constructive feedback. To stay up to date with our progress, or to comment on the document,<a href="https://twitter.com/decodeproject?lang=en"> Tweet</a> us, message us at <a href="mailto:info@decodeproject.eu">info@decodeproject.eu</a> or keep track of<a href="https://decodeproject.eu/"> our website</a> to find out more about the upcoming technology pilots.</p></div>
+</div>
+<div> </div>
+</div>
+</div></div></div>  </div>
+
+  
+  
+</article>
+  </div>
+</div>
+  </div>
+                            </div></section> <!-- /.section, /#content -->
+
+            
+            
+        </div>
+    
+    </div> <!-- /#main, /#main-wrapper -->
+
+    <div id="footer"><div class="section">
+        <div class="region region-footer">
+    <div id="block-menu-block-1" class="block block-menu-block">
+
+    
+  <div class="content">
+    <div class="menu-block-wrapper menu-block-1 menu-name-menu-footer-menu parent-mlid-0 menu-level-1">
+  <ul class="menu"><li class="first leaf menu-mlid-552"><a href="../cookies.html" title="">Cookies</a></li>
+<li class="last leaf menu-mlid-553"><a href="../privacy-policy.html" title="">Privacy policy</a></li>
+</ul></div>
+  </div>
+</div>
+<div id="block-block-3" class="block block-block">
+
+    
+  <div class="content">
+    <p style="color: white;"><img alt="" src="../sites/default/files/eu-wout.png" style="width: 30px; height: 20px;" /> DECODE was funded by the European Union's Horizon 2020 Programme, under grant agreement number 732546.</p>
+<p style="color: white;">DECODE is a Europe-wide consortium. This website is managed on behalf of the consortium by the Dyne.org foundation, a not for profit organization established in 2005 with reg.num. 34237525 in The Netherlands. Haparandadam 7-A1, 1013AK Amsterdam</p>
+  </div>
+</div>
+  </div>
+    </div></div> <!-- /.section, /#footer -->
+
+  </div></div> <!-- /#page, /#page-wrapper -->
+  <script type="text/javascript">
+<!--//--><![CDATA[//><!--
+window.eu_cookie_compliance_cookie_name = "";
+//--><!]]>
+</script>
+<script type="text/javascript" src="../sites/default/files/js/js_lcej-wnhkuKN7X2sAkXYDMoQiGnYWSLvXW93M0RAg4Y.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+da2a.targets=[
+{title:"DECODE: A technical explainer ",url:"https:\/\/www.decodeproject.eu\/blog\/decode-technical-explainer"}];
+da2a.html_done=true;if(da2a.script_ready&&!da2a.done)da2a.init();da2a.script_load();
+//--><!]]>
+</script>
+</body>
+</html>

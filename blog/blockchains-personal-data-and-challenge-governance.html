@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html dir="ltr"
+  xmlns:og="http://ogp.me/ns#"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:dc="http://purl.org/dc/terms/"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:sioc="http://rdfs.org/sioc/ns#"
+  xmlns:sioct="http://rdfs.org/sioc/types#"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="../sites/default/files/favicon_13.png" type="image/png" />
+<meta name="description" content="This post offers some thoughts on the opportunities and challenges of blockchain technology, with particular reference to the DECODE project." />
+<meta name="generator" content="Drupal 7 (http://drupal.org)" />
+<link rel="canonical" href="blockchains-personal-data-and-challenge-governance.html" />
+<link rel="shortlink" href="blockchains-personal-data-and-challenge-governance.html" />
+<meta property="og:site_name" content="DECODE" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Blockchains, personal data and the challenge of governance" />
+<meta property="og:url" content="https://www.decodeproject.eu/blog/blockchains-personal-data-and-challenge-governance" />
+<meta property="og:description" content="This post offers some thoughts on the opportunities and challenges of blockchain technology, with particular reference to the DECODE project." />
+<meta property="og:updated_time" content="2017-06-24T13:11:17+01:00" />
+<meta property="og:image" content="http://www.decodeproject.eu/sites/default/files/styles/article_main_image/public/people-large%402x_0.png" />
+<meta property="og:image:url" content="http://www.decodeproject.eu/sites/default/files/styles/article_main_image/public/people-large%402x_0.png" />
+<meta property="og:image:secure_url" content="https://www.decodeproject.eu/sites/default/files/styles/article_main_image/public/people-large%402x_0.png" />
+<meta property="og:image:type" content="image/png" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Blockchains, personal data and the challenge of governance" />
+<meta name="twitter:url" content="https://www.decodeproject.eu/blog/blockchains-personal-data-and-challenge-governance" />
+<meta name="twitter:description" content="This post offers some thoughts on the opportunities and challenges of blockchain technology, with particular reference to the DECODE project." />
+<meta property="article:published_time" content="2017-06-22T18:15:16+01:00" />
+<meta property="article:modified_time" content="2017-06-24T13:11:17+01:00" />
+<meta name="dcterms.title" content="Blockchains, personal data and the challenge of governance" />
+<meta name="dcterms.creator" content="theo.bass@nesta.org.uk" />
+<meta name="dcterms.description" content="This post offers some thoughts on the opportunities and challenges of blockchain technology, with particular reference to the DECODE project." />
+<meta name="dcterms.date" content="2017-06-22T18:15+01:00" />
+<meta name="dcterms.type" content="Text" />
+<meta name="dcterms.format" content="text/html" />
+<meta name="dcterms.identifier" content="https://www.decodeproject.eu/blog/blockchains-personal-data-and-challenge-governance" />
+  <title>Blockchains, personal data and the challenge of governance | DECODE</title>
+  <link type="text/css" rel="stylesheet" href="../sites/default/files/css/css_xE-rWrJf-fncB6ztZfd2huxqgxu4WO-qwma6Xer30m4.css" media="all" />
+<link type="text/css" rel="stylesheet" href="../sites/default/files/css/css_xeScBveY6rZxSm9OmEpbcyqtCL3KJH4Sn9gI8aKQH6I.css" media="all" />
+<link type="text/css" rel="stylesheet" href="../sites/default/files/css/css_okgKBIU4CAVLBQ8WL9ju58gvDdiBuqi4heaRRHcTYP0.css" media="all" />
+<style type="text/css" media="all">
+<!--/*--><![CDATA[/*><!--*/
+.addtoany_list.a2a_target{display:block;text-align:center;margin-top:1em;}
+
+/*]]>*/-->
+</style>
+<link type="text/css" rel="stylesheet" href="../sites/default/files/css/css_RVI95kbvU3ZEyQZTWpnpQ3FT6vVhhIo_ngc_c93FjNs.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500" media="all" />
+<link type="text/css" rel="stylesheet" href="../sites/default/files/css/css_vXvt0DBzVlIf-3cs_aiG0yLH6yT_ZSWmpec_qmUQYBE.css" media="all" />
+<link type="text/css" rel="stylesheet" href="../sites/default/files/css/css_FU8o5qSlzu0ob5FWyJ2aZa0IlDPx0rktUUmAbSxIXiw.css" media="all" />
+  <script type="text/javascript" src="../sites/default/files/js/js_ypadrG4kz9-JBpNOXmgjyVozLCJG_1RP3Ig-iqWR8n0.js"></script>
+<script type="text/javascript" src="../sites/default/files/js/js_TVTqjz8JHRb2KK9hlzuk0YsjzD013dKyYX_OTz-2VXU.js"></script>
+<script type="text/javascript" src="../sites/default/files/js/js_i9-mZxF1wrIj_pHo8CcygMfG3cz35Mlm6odAjzL19fk.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+var _paq = _paq || [];(function(){var u=(("https:" == document.location.protocol) ? "https://www.decodeproject.eu/piwik/" : "http://www.decodeproject.eu/piwik/");_paq.push(["setSiteId", "1"]);_paq.push(["setTrackerUrl", u+"piwik.php"]);_paq.push(["setDoNotTrack", 1]);_paq.push(["trackPageView"]);_paq.push(["setIgnoreClasses", ["no-tracking","colorbox"]]);_paq.push(["enableLinkTracking"]);var d=document,g=d.createElement("script"),s=d.getElementsByTagName("script")[0];g.type="text/javascript";g.defer=true;g.async=true;g.src=u+"piwik.js";s.parentNode.insertBefore(g,s);})();
+//--><!]]>
+</script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+window.a2a_config=window.a2a_config||{};window.da2a={done:false,html_done:false,script_ready:false,script_load:function(){var a=document.createElement('script'),s=document.getElementsByTagName('script')[0];a.type='text/javascript';a.async=true;a.src='https://static.addtoany.com/menu/page.js';s.parentNode.insertBefore(a,s);da2a.script_load=function(){};},script_onready:function(){da2a.script_ready=true;if(da2a.html_done)da2a.init();},init:function(){for(var i=0,el,target,targets=da2a.targets,length=targets.length;i<length;i++){el=document.getElementById('da2a_'+(i+1));target=targets[i];a2a_config.linkname=target.title;a2a_config.linkurl=target.url;if(el){a2a.init('page',{target:el});el.id='';}da2a.done=true;}da2a.targets=[];}};(function ($){Drupal.behaviors.addToAny = {attach: function (context, settings) {if (context !== document && window.da2a) {if(da2a.script_ready)a2a.init_all();da2a.script_load();}}}})(jQuery);a2a_config.callbacks=a2a_config.callbacks||[];a2a_config.callbacks.push({ready:da2a.script_onready});a2a_config.overlays=a2a_config.overlays||[];a2a_config.templates=a2a_config.templates||{};
+//--><!]]>
+</script>
+<script type="text/javascript" src="../sites/default/files/js/js_kb9AMFOJk8ALipMO9hfI2Xld92MCg5LBQTVr-GMkqy0.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"marmelo","theme_token":"2WEroqTtUhpxJLU-vTmPSfATZrnVhrsh_vCiFKP93RY","js":{"0":1,"sites\/all\/modules\/eu_cookie_compliance\/js\/eu_cookie_compliance.js":1,"1":1,"sites\/all\/modules\/jquery_update\/replace\/jquery\/1.10\/jquery.min.js":1,"misc\/jquery-extend-3.4.0.js":1,"misc\/jquery-html-prefilter-3.5.0-backport.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/modules\/eu_cookie_compliance\/js\/jquery.cookie-1.4.1.min.js":1,"sites\/all\/modules\/matomo\/matomo.js":1,"2":1,"3":1,"sites\/all\/themes\/marmelo_base\/js\/vendor\/DecodeDrawer.js":1,"sites\/all\/themes\/marmelo_base\/js\/vendor\/MarmeloSlide.js":1,"sites\/all\/themes\/marmelo_base\/js\/vendor\/raf-polyfill.js":1,"sites\/all\/themes\/marmelo_base\/js\/vendor\/readmore.js":1,"sites\/all\/themes\/marmelo_base\/js\/vendor\/jquery.scrollTo.min.js":1,"sites\/all\/themes\/marmelo_base\/js\/canvas.js":1,"sites\/all\/themes\/marmelo_base\/js\/theme.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"modules\/field\/theme\/field.css":1,"modules\/node\/node.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/views\/css\/views.css":1,"sites\/all\/modules\/media\/modules\/media_wysiwyg\/css\/media_wysiwyg.base.css":1,"sites\/all\/modules\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/eu_cookie_compliance\/css\/eu_cookie_compliance.css":1,"0":1,"sites\/all\/modules\/date\/date_api\/date.css":1,"sites\/all\/modules\/addtoany\/addtoany.css":1,"https:\/\/fonts.googleapis.com\/css?family=Montserrat:300,400,500":1,"public:\/\/ctools\/css\/f623fca947872ccd2ba0c8065fd73eb4.css":1,"sites\/all\/themes\/marmelo_base\/css\/vendor\/hamburger.css":1,"sites\/all\/themes\/marmelo_base\/css\/styles.css":1}},"eu_cookie_compliance":{"cookie_policy_version":"1.0.0","popup_enabled":1,"popup_agreed_enabled":0,"popup_hide_agreed":0,"popup_clicking_confirmation":1,"popup_scrolling_confirmation":0,"popup_html_info":"\u003Cdiv class=\u0022eu-cookie-compliance-banner eu-cookie-compliance-banner-info eu-cookie-compliance-banner--default\u0022\u003E\n  \u003Cdiv class=\u0022popup-content info\u0022\u003E\n    \u003Cdiv id=\u0022popup-text\u0022\u003E\n      \u003Ch2\u003EWe use cookies on this site to enhance your user experience\u003C\/h2\u003E\n\u003Cp\u003EBy clicking any link on this page you are giving your consent for us to set cookies.\u003C\/p\u003E\n              \u003Cbutton type=\u0022button\u0022 class=\u0022find-more-button eu-cookie-compliance-more-button\u0022\u003ENo, give me more info\u003C\/button\u003E\n          \u003C\/div\u003E\n    \n    \u003Cdiv id=\u0022popup-buttons\u0022 class=\u0022\u0022\u003E\n      \u003Cbutton type=\u0022button\u0022 class=\u0022agree-button eu-cookie-compliance-default-button\u0022\u003EOK, I agree\u003C\/button\u003E\n          \u003C\/div\u003E\n  \u003C\/div\u003E\n\u003C\/div\u003E","use_mobile_message":false,"mobile_popup_html_info":"\u003Cdiv class=\u0022eu-cookie-compliance-banner eu-cookie-compliance-banner-info eu-cookie-compliance-banner--default\u0022\u003E\n  \u003Cdiv class=\u0022popup-content info\u0022\u003E\n    \u003Cdiv id=\u0022popup-text\u0022\u003E\n      \u003Ch2\u003EWe use cookies on this site to enhance your user experience\u003C\/h2\u003E\n\u003Cp\u003EBy tapping the Accept button, you agree to us doing so.\u003C\/p\u003E\n              \u003Cbutton type=\u0022button\u0022 class=\u0022find-more-button eu-cookie-compliance-more-button\u0022\u003ENo, give me more info\u003C\/button\u003E\n          \u003C\/div\u003E\n    \n    \u003Cdiv id=\u0022popup-buttons\u0022 class=\u0022\u0022\u003E\n      \u003Cbutton type=\u0022button\u0022 class=\u0022agree-button eu-cookie-compliance-default-button\u0022\u003EOK, I agree\u003C\/button\u003E\n          \u003C\/div\u003E\n  \u003C\/div\u003E\n\u003C\/div\u003E\n","mobile_breakpoint":768,"popup_html_agreed":"\u003Cdiv\u003E\n  \u003Cdiv class=\u0022popup-content agreed\u0022\u003E\n    \u003Cdiv id=\u0022popup-text\u0022\u003E\n      \u003Ch2\u003EThank you for accepting cookies\u003C\/h2\u003E\n\u003Cp\u003EYou can now hide this message or find out more about cookies.\u003C\/p\u003E\n    \u003C\/div\u003E\n    \u003Cdiv id=\u0022popup-buttons\u0022\u003E\n      \u003Cbutton type=\u0022button\u0022 class=\u0022hide-popup-button eu-cookie-compliance-hide-button\u0022\u003EHide\u003C\/button\u003E\n              \u003Cbutton type=\u0022button\u0022 class=\u0022find-more-button eu-cookie-compliance-more-button-thank-you\u0022 \u003EMore info\u003C\/button\u003E\n          \u003C\/div\u003E\n  \u003C\/div\u003E\n\u003C\/div\u003E","popup_use_bare_css":false,"popup_height":"auto","popup_width":"100%","popup_delay":1000,"popup_link":"\/privacy-policy","popup_link_new_window":1,"popup_position":null,"fixed_top_position":true,"popup_language":"en","store_consent":false,"better_support_for_screen_readers":0,"reload_page":0,"domain":"","domain_all_sites":null,"popup_eu_only_js":0,"cookie_lifetime":100,"cookie_session":false,"disagree_do_not_show_popup":0,"method":"default","allowed_cookies":"","withdraw_markup":"\u003Cbutton type=\u0022button\u0022 class=\u0022eu-cookie-withdraw-tab\u0022\u003EPrivacy settings\u003C\/button\u003E\n\u003Cdiv class=\u0022eu-cookie-withdraw-banner\u0022\u003E\n  \u003Cdiv class=\u0022popup-content info\u0022\u003E\n    \u003Cdiv id=\u0022popup-text\u0022\u003E\n      \u003Ch2\u003EWe use cookies on this site to enhance your user experience\u003C\/h2\u003E\n\u003Cp\u003EYou have given your consent for us to set cookies.\u003C\/p\u003E\n    \u003C\/div\u003E\n    \u003Cdiv id=\u0022popup-buttons\u0022\u003E\n      \u003Cbutton type=\u0022button\u0022 class=\u0022eu-cookie-withdraw-button\u0022\u003EWithdraw consent\u003C\/button\u003E\n    \u003C\/div\u003E\n  \u003C\/div\u003E\n\u003C\/div\u003E\n","withdraw_enabled":false,"withdraw_button_on_info_popup":false,"cookie_categories":[],"cookie_categories_details":[],"enable_save_preferences_button":true,"cookie_name":"","containing_element":"body","automatic_cookies_removal":true},"matomo":{"trackMailto":1}});
+//--><!]]>
+</script>
+  <meta name="viewport" content="width=device-width" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+</head>
+<body class="html not-front not-logged-in no-sidebars page-node page-node- page-node-122 node-type-article" >
+
+  <canvas id="background-canvas" width="100%" height="100%"> </canvas>
+
+  <button class="hamburger hamburger--vortex" type="button">
+    <span class="hamburger-box">
+      <span class="hamburger-inner"></span>
+    </span>
+  </button>
+
+  <div id="skip-link">
+    <a href="blockchains-personal-data-and-challenge-governance.html#main-content" class="element-invisible element-focusable">Skip to main content</a>
+  </div>
+
+
+    
+  <div id="page-wrapper"><div id="page">
+
+    <header><div class="section clearfix">
+
+              <a href="../index.html" title="Home" rel="home" id="logo">
+          <img src="../sites/all/themes/marmelo_base/img/logo.svg" alt="Home" />
+        </a>
+      
+      
+      
+        
+      <nav id='navigation'>
+        
+          <div class="region region-navigation">
+    <div id="block-menu-meganav-menu-meganav" class="block block-menu-meganav">
+
+    
+  <div class="content">
+    <div class='meganav'><ul class='menu'><li class='menu-item-1'><a href="../what-decode.html">The project</a><ul class='menu children_5'><a href='../what-decode.html'><li class=''><h5 class='title'>What is DECODE?</h5><p class='summary'>Find out more about the project and the technology behind it</p></li><a href='../team.html'><li class=''><h5 class='title'>The team</h5><p class='summary'>Meet the DECODE team</p></li><a href='../partners.html'><li class=''><h5 class='title'>The partners</h5><p class='summary'><p>DECODE is a consortium of 15&nbsp;organisations from across the European Union</p></p></li><a href='../have-more-questions.html'><li class=''><h5 class='title'>Have more questions?</h5><p class='summary'>Definitions and other useful information about the project</p></li><a href='../decode-advisory-group.html'><li class=''><h5 class='title'>DECODE Advisory Group</h5><p class='summary'><p>The DECODE Advisory Group kicks off in&nbsp;January 2018 after the second annual General Assembly</p></p></li></ul></li><li class='menu-item-2'><a href="../get-involved.html">Contact Us</a><ul class='menu children_5'><a href='../events.html'><li class=''><h5 class='title'>Events</h5><p class='summary'><p>Information about the events DECODE held&nbsp;across Europe</p></p></li><a href='../pilots.html'><li class=''><h5 class='title'>Pilots</h5><p class='summary'>Find out more about what happened in DECODE's pilots in Amsterdam or Barcelona</p></li><a href='../developers.html'><li class=''><h5 class='title'>For developers</h5><p class='summary'><p>Tools, code repositories and more</p></p></li><a href='../contact-us.html'><li class=''><h5 class='title'>Contact us</h5><p class='summary'>Get in touch</p></li></ul></li><li class='menu-item-3'><a href="../project-timeline.html">Our progress</a><ul class='menu children_6'><a href='../project-timeline.html'><li class=''><h5 class='title'>Project timeline</h5><p class='summary'><p>Overview of our progress to date and what is to come</p></p></li><a href='../decode-media.html'><li class=''><h5 class='title'>News</h5><p class='summary'><p>Read media and news articles about DECODE</p></p></li><a href='../blog.html'><li class=''><h5 class='title'>Blog</h5><p class='summary'>Thoughts from the DECODE team</p></li><a href='../deliverables.html'><li class=''><h5 class='title'>Project Deliverables</h5><p class='summary'>Read our project deliverables and other outputs about DECODE</p></li><a href='../resources.html'><li class=''><h5 class='title'>Resources</h5><p class='summary'><p>Videos, toolkits, comms resources and more from the DECODE project</p></p></li></ul></li></li></li><li class='menu-item-6'><a href="../events/beyond-surveillance-capitalism-reclaiming-digital-sovereignty.html">Symposium 2018</a><ul class='menu children_4'><a href='../events/beyond-surveillance-capitalism-reclaiming-digital-sovereignty.html'><li class=''><h5 class='title'>Overview</h5><p class='summary'>How can technology facilitate the transition from surveillance capitalism to an alternative project?</p></li><a href='../events/beyond-surveillance-capitalism-reclaiming-digital-sovereignty/speakers.html'><li class=''><h5 class='title'>Speakers</h5><p class='summary'>Who's speaking?</p></li><a href='../events/beyond-surveillance-capitalism-reclaiming-digital-sovereignty/media.html'><li class=''><h5 class='title'>Media</h5><p class='summary'>Explore videos, photos and other content from the event</p></li><a href='../events/beyond-surveillance-capitalism-reclaiming-digital-sovereignty/getting-here.html'><li class=''><h5 class='title'>Getting here</h5><p class='summary'>Getting to our venue, the Barcelona Contemporary Culture Centre</p></li></ul></li><li class='menu-item-7'><a href="../events/our-data-our-future-radical-tech-democratic-digital-society.html">Symposium 2019</a><ul class='menu children_3'><a href='../events/our-data-our-future-radical-tech-democratic-digital-society.html'><li class=''><h5 class='title'>Overview</h5><p class='summary'><p>Overview of the 2019 DECODE Symposium</p></p></li><a href='../events/speakers.html'><li class=''><h5 class='title'>Speakers</h5><p class='summary'><p>Who&#39;s speaking?</p></p></li><a href='https://decodeproject.eu/events/media'><li class=''><h5 class='title'>Media</h5><p class='summary'><p>Who&#39;s speaking?</p></p></li></ul></li></ul></div><div class='overlay'></div>  </div>
+</div>
+  </div>
+
+      </nav> <!-- /.section, /#navigation -->
+          
+
+    </div></header> <!-- /.section, /#header -->
+
+
+          <div id="breadcrumb"><h2 class="element-invisible">You are here</h2><div class="breadcrumb"><a href="../index.html">Home</a></div></div>
+    
+    
+    <div id="main-wrapper">
+        <div id="main" class="clearfix">
+
+            <section id="content" class="column"><div class="section">
+                                <a id="main-content"></a>
+                                <h1 class="title" id="page-title">Blockchains, personal data and the challenge of governance</h1>                                <div class="tabs"></div>                                                  <div class="region region-content">
+    <div id="block-system-main" class="block block-system">
+
+    
+  <div class="content">
+    <article id="node-122" class="node node-article clearfix" about="/blog/blockchains-personal-data-and-challenge-governance" typeof="sioc:Item foaf:Document">
+
+  
+      <span property="dc:title" content="Blockchains, personal data and the challenge of governance" class="rdf-meta element-hidden"></span>
+  
+  <div class="content">
+    <div class="field field-name-field-author field-type-text field-label-hidden"><div class="field-items"><div class="field-item even">Theo Bass</div></div></div><div class="field field-name-field-publication-date field-type-datetime field-label-hidden"><div class="field-items"><div class="field-item even"><span class="date-display-single" property="dc:date" datatype="xsd:dateTime" content="2017-06-22T00:00:00+01:00">Thursday 22nd June 2017</span></div></div></div><span class="a2a_kit a2a_target addtoany_list" id="da2a_1">
+      <a class="a2a_button_facebook a2a_counter"></a>
+<a class="a2a_button_twitter a2a_counter"></a>
+<a class="a2a_button_linkedin a2a_counter"></a>
+<a class="a2a_button_tumblr a2a_counter"></a>
+<a class="a2a_button_reddit"></a>
+<a class="a2a_button_slashdot"></a>
+      
+      
+    </span>
+    <script type="text/javascript">
+<!--//--><![CDATA[//><!--
+if(window.da2a)da2a.script_load();
+//--><!]]>
+</script><div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><p dir="ltr">This post offers some thoughts on the opportunities and challenges of blockchain technology, with particular reference to the <a href="https://decodeproject.eu/">DECODE project</a>. DECODE is a pan-European effort to research and pilot new approaches to how people manage their personal data. Here I’ll describe what a blockchain is, why blockchains are relevant to personal data management, and what difficulties might arise as the technology becomes implemented more widely.</p>
+<h3 dir="ltr">Blockchain 101</h3>
+<p dir="ltr">Put simply, blockchain is a way of getting a diverse set of untrusted actors to agree on a single record of events. Its first implementation was in the digital currency bitcoin, a peer-to-peer method of exchanging digital money that removes reliance on a trusted intermediary like a payment processor or a bank.</p>
+<p dir="ltr">The bitcoin blockchain is a publicly accessible ledger of every digital transaction that has ever happened across the network, so when person A tries to pay person B, the data can be inspected by anyone, to either prove or disprove that person B has those bitcoins.</p>
+<p dir="ltr">All these transactions, including individual senders and receivers, appear on the blockchain as ever growing list of alphanumeric gobbledygook - lines of text known as cryptographic ‘hashes’. With this, the blockchain cleverly balances a radical approach to transparency with user pseudonymity: anyone can check the record to verify that their money has arrived at the intended recipient’s wallet, but the record provides just enough anonymity that people can use bitcoin without being easily identified (and <a href="http://www.telegraph.co.uk/news/2017/05/13/nhs-cyber-attack-everything-need-know-biggest-ransomware-offensive/">ransomeware hackers</a> are willing to be paid in it).</p>
+<p dir="ltr">All of this gets really interesting when you consider that no single entity owns or controls the maintenance of these digital records. Thousands of computers across the network process and store the transaction data. Because of this, it’s very difficult for anyone to erase, censor, or tamper with the data without everyone else in the network finding out.</p>
+<p dir="ltr">In short, bitcoin is an attempt to achieve a decentralised network, a system of exchange with no single locus of authority. This means that all responsibility over the ownership of bitcoin is left to individual users. No customer service, no regulatory oversight - whoever holds bitcoin is the sole bearer of all ownership and responsibility over that asset.</p>
+<p dir="ltr">The question everyone’s asking is what else could this be useful for besides digital currency?</p>
+<p dir="ltr">Blockchain is tipped to transform a whole range of sectors, though here I want to raise one specific example, namely digital identity and personal data management.</p>
+<h3 dir="ltr">A new anchor for digital identity?</h3>
+<p dir="ltr">There are a number of dominant internet platforms (Google, Facebook, Amazon, etc.) that hoard, analyse and sell information about their users in the name of a more personalised and efficient service. This has become a problem.</p>
+<p dir="ltr">Consumers feel they are losing control over how their data is used and reused on the web. 500 million adblocker downloads is a symptom of a market which isn’t working well for people. As Irene Ng mentions <a href="http://www.nesta.org.uk/blog/personal-data-innovation-whom">in a recent guest blog</a> on the Nesta website, the secondary data market is thriving (online advertising is a major player), as companies benefit from the opacity and lack of transparency about where profit is made from personal data.</p>
+<p dir="ltr">It’s said that blockchain’s key characteristics could provide a foundational protocol for a fairer digital identity system on the web. Beyond its application as digital currency, blockchain could provide a new set of technical standards for transparency, openness, and user consent, on top of which a whole new generation of services might be built.</p>
+<p dir="ltr">While the aim is ambitious, a handful of projects are rising to the challenge.</p>
+<p dir="ltr"><a href="https://blockstack.org/">Blockstack</a> is creating a global system of digital IDs, which are written into the bitcoin blockchain. Nobody can touch them other than the owner of that ID. Blockstack are building a new generation of applications on top of this infrastructure which promises to provide “a new decentralized internet where users own their data and apps run locally”.</p>
+<p dir="ltr"><a href="https://sovrin.org/">Sovrin</a> attempts to provide users with “self-sovereign identity”. The argument is that “centralized” systems for storing personal data make it a “treasure chest for attackers”. Sovrin argues that users should more easily be able to have “ownership” over their data, and the exchange of data should be made possible through a decentralised, tamper-proof ledger of transactions between users.</p>
+<p dir="ltr">Our own <a href="https://decodeproject.eu/">DECODE project</a> is piloting a set of collaboratively owned, local sharing economy platforms in Barcelona and Amsterdam. The blockchain aims to provide a public record of entitlements over where people’s data is stored, who can access it and for what purpose (with <a href="https://decodeproject.eu/blog/creating-scalable-distributed-ledgers-decode">some additional help</a> from new techniques in zero-knowledge cryptography to preserve people’s privacy).</p>
+<p dir="ltr">There’s no doubt this is an exciting field of innovation. But the debate is characterised by a lot of hype. The following sections therefore discuss some of the challenges thrown up when we start thinking about implementations beyond bitcoin.</p>
+<h3 dir="ltr">Blockchains and the challenge of governance</h3>
+<p dir="ltr">As mentioned above, bitcoin is a “bearer asset”. This is a necessary feature of decentralisation -- all users maintain sole ownership over the digital money they hold on the network. If users get hacked (digital wallets sometimes do), or if a password gets lost, the money is irretrievable.</p>
+<p dir="ltr">While the example of losing a password might seem trivial, it highlights some difficult questions for proponents of blockchain’s wider uses. What happens if there’s a dispute over an online transaction, but no intermediary to settle it? What happens if someone's digital assets or their digital identitiy is breached and sensitive data falls into the wrong hands? It might be necessary to assign responsibility to a governing actor to help resolve the issue, but of course this would require the introduction of a trusted middleman.</p>
+<p dir="ltr">Bitcoin doesn’t try to answer these questions; its anonymous creators deliberately tried to avoid implementing a clear model of governance over the network, probably because they knew that bitcoin would be used by people as a method for <a href="https://www.vice.com/en_us/article/bitcoin-testimonials-black-market-dispatches">subverting the law</a>. Bitcoin still sees a lot of use in gray economies, including for the sale of drugs and gambling.</p>
+<p dir="ltr">But if blockchains are set to enter the mainstream, providing for businesses, governments and nonprofits, then they won't be able to function irrespective of the law. They will need to find use-cases that can operate alongside legal frameworks and jurisdictional boundaries. They will need to demonstrate regulatory compliance, create systems of rules and provide accountability when things go awry. This cannot just be solved through increasingly sophisticated coding.</p>
+<p dir="ltr">All of this raises a potential paradox <a href="https://www.oii.ox.ac.uk/blog/the-blockchain-paradox-why-distributed-ledger-technologies-may-do-little-to-transform-the-economy/">recently elaborated</a> in a post by Vili Lehdonvirta of the Oxford Internet Institute: is it possible to successfully govern blockchains without undermining their entire purpose?</p>
+<h3 dir="ltr">Far more than a technical fix</h3>
+<p dir="ltr">In response to this conundrum, blockchain advocates might argue that the technology in fact comes hand in hand with innovative new models of social organisation.</p>
+<p dir="ltr">Some say, for instance, that blockchains might be an appropriate technology to inspire a new generation of <a href="https://www.tni.org/files/publication-downloads/commons_transition_and_p2p_primer_v9.pdf">cooperative or commons-based digital platforms</a>, where all the users are stakeholders with equal democratic influence over how the technology is used.</p>
+<p dir="ltr">There is a further trend towards shared governance models. Blockchain innovators are forming consortiums, like Sovrin, the Interplanetary Database and R3, which help to earn users’ trust by spreading the ownership and management of the technology across multiple actors.</p>
+<p dir="ltr">A further example, more tangentially related to digital identity, is the Mediachain project which aims to create <a href="https://blog.mediachain.io/what-a-blockchain-for-music-really-means-e2f8dc66d57d">a globally shared database of intellectual property</a> for music. A number of previous attempts to create a centralised solution have failed due to the political friction associated with one actor storing and managing all of the information in one place. Instead, the blockchain aims to help enforce a collaborative agreement between the different stakeholders to share control over the process of record-keeping.</p>
+<p dir="ltr">The issue here is that fostering these kinds of cooperative relationships in practice is difficult and often messy. It’s far more than a technical challenge, but a social, political and legal one too. It will also require new business models, where new sources of value can be found in companies collaborating and opening up their internal processes across organisational boundaries.</p>
+<p dir="ltr">This should come as a dose of reality to a blockchain debate dominated by an assumption that <a href="https://www.theguardian.com/world/2016/jul/07/blockchain-answer-life-universe-everything-bitcoin-technology">all the world’s complex problems</a> can be written away by software alone.</p>
+<p dir="ltr">If blockchain advocates only work towards purely technical solutions and ignore real-world challenges of trying to implement decentralisation, then we’ll only ever see flawed implementations of the technology. This is already happening in the form of centrally administered, proprietary or <a href="http://www.multichain.com/blog/2016/12/spot-half-baked-blockchain/">‘half-baked’</a> blockchains, which don’t offer much more value than traditional databases.</p>
+<h3 dir="ltr">Finally…</h3>
+<p dir="ltr">Over the coming months DECODE will publish a number of research outputs scoping the literature of new economic models, governance models, and technologies for decentralisation and privacy in the personal data economy. Keep up to date on our <a href="https://decodeproject.eu/">website</a>. You can also follow the project on Twitter <a href="https://twitter.com/decodeproject?lang=en">@decodeproject</a>, or find me <a href="https://twitter.com/theo_bass">@theo_bass</a>.</p>
+<p dir="ltr"><em>Thanks to Tom Symons, John Davies and Katja Bego for useful discussions and comments.</em></p>
+</div></div></div>  </div>
+
+  
+  
+</article>
+  </div>
+</div>
+  </div>
+                            </div></section> <!-- /.section, /#content -->
+
+            
+            
+        </div>
+    
+    </div> <!-- /#main, /#main-wrapper -->
+
+    <div id="footer"><div class="section">
+        <div class="region region-footer">
+    <div id="block-menu-block-1" class="block block-menu-block">
+
+    
+  <div class="content">
+    <div class="menu-block-wrapper menu-block-1 menu-name-menu-footer-menu parent-mlid-0 menu-level-1">
+  <ul class="menu"><li class="first leaf menu-mlid-552"><a href="../cookies.html" title="">Cookies</a></li>
+<li class="last leaf menu-mlid-553"><a href="../privacy-policy.html" title="">Privacy policy</a></li>
+</ul></div>
+  </div>
+</div>
+<div id="block-block-3" class="block block-block">
+
+    
+  <div class="content">
+    <p style="color: white;"><img alt="" src="../sites/default/files/eu-wout.png" style="width: 30px; height: 20px;" /> DECODE was funded by the European Union's Horizon 2020 Programme, under grant agreement number 732546.</p>
+<p style="color: white;">DECODE is a Europe-wide consortium. This website is managed on behalf of the consortium by the Dyne.org foundation, a not for profit organization established in 2005 with reg.num. 34237525 in The Netherlands. Haparandadam 7-A1, 1013AK Amsterdam</p>
+  </div>
+</div>
+  </div>
+    </div></div> <!-- /.section, /#footer -->
+
+  </div></div> <!-- /#page, /#page-wrapper -->
+  <script type="text/javascript">
+<!--//--><![CDATA[//><!--
+window.eu_cookie_compliance_cookie_name = "";
+//--><!]]>
+</script>
+<script type="text/javascript" src="../sites/default/files/js/js_lcej-wnhkuKN7X2sAkXYDMoQiGnYWSLvXW93M0RAg4Y.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+da2a.targets=[
+{title:"Blockchains, personal data and the challenge of governance",url:"https:\/\/www.decodeproject.eu\/blog\/blockchains-personal-data-and-challenge-governance"}];
+da2a.html_done=true;if(da2a.script_ready&&!da2a.done)da2a.init();da2a.script_load();
+//--><!]]>
+</script>
+</body>
+</html>

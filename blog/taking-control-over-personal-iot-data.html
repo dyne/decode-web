@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html dir="ltr"
+  xmlns:og="http://ogp.me/ns#"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:dc="http://purl.org/dc/terms/"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:sioc="http://rdfs.org/sioc/ns#"
+  xmlns:sioct="http://rdfs.org/sioc/types#"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="../sites/default/files/favicon_13.png" type="image/png" />
+<meta name="description" content="In his 2015 talk Haunted By Data, Maciej Ceglowski convincingly argued the case that a lot of the way companies talk about personal or aggregated personal data is almost exactly wrong; rather than thi" />
+<meta name="generator" content="Drupal 7 (http://drupal.org)" />
+<link rel="canonical" href="taking-control-over-personal-iot-data.html" />
+<link rel="shortlink" href="taking-control-over-personal-iot-data.html" />
+<meta property="og:site_name" content="DECODE" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Taking control over personal IoT data" />
+<meta property="og:url" content="https://www.decodeproject.eu/blog/taking-control-over-personal-iot-data" />
+<meta property="og:description" content="In his 2015 talk Haunted By Data, Maciej Ceglowski convincingly argued the case that a lot of the way companies talk about personal or aggregated personal data is almost exactly wrong; rather than thi" />
+<meta property="og:updated_time" content="2018-10-29T16:38:10+00:00" />
+<meta property="og:image" content="http://www.decodeproject.eu/sites/default/files/styles/article_main_image/public/people-large%402x_0.png" />
+<meta property="og:image:url" content="http://www.decodeproject.eu/sites/default/files/styles/article_main_image/public/people-large%402x_0.png" />
+<meta property="og:image:secure_url" content="https://www.decodeproject.eu/sites/default/files/styles/article_main_image/public/people-large%402x_0.png" />
+<meta property="og:image:type" content="image/png" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Taking control over personal IoT data" />
+<meta name="twitter:url" content="https://www.decodeproject.eu/blog/taking-control-over-personal-iot-data" />
+<meta name="twitter:description" content="In his 2015 talk Haunted By Data, Maciej Ceglowski convincingly argued the case that a lot of the way companies talk about personal or aggregated personal data is almost exactly wrong; rather than thi" />
+<meta property="article:published_time" content="2018-04-18T14:43:29+01:00" />
+<meta property="article:modified_time" content="2018-10-29T16:38:10+00:00" />
+<meta name="dcterms.title" content="Taking control over personal IoT data" />
+<meta name="dcterms.creator" content="theo.bass@nesta.org.uk" />
+<meta name="dcterms.description" content="In his 2015 talk Haunted By Data, Maciej Ceglowski convincingly argued the case that a lot of the way companies talk about personal or aggregated personal data is almost exactly wrong; rather than thi" />
+<meta name="dcterms.date" content="2018-04-18T14:43+01:00" />
+<meta name="dcterms.type" content="Text" />
+<meta name="dcterms.format" content="text/html" />
+<meta name="dcterms.identifier" content="https://www.decodeproject.eu/blog/taking-control-over-personal-iot-data" />
+  <title>Taking control over personal IoT data | DECODE</title>
+  <link type="text/css" rel="stylesheet" href="../sites/default/files/css/css_xE-rWrJf-fncB6ztZfd2huxqgxu4WO-qwma6Xer30m4.css" media="all" />
+<link type="text/css" rel="stylesheet" href="../sites/default/files/css/css_xeScBveY6rZxSm9OmEpbcyqtCL3KJH4Sn9gI8aKQH6I.css" media="all" />
+<link type="text/css" rel="stylesheet" href="../sites/default/files/css/css_okgKBIU4CAVLBQ8WL9ju58gvDdiBuqi4heaRRHcTYP0.css" media="all" />
+<style type="text/css" media="all">
+<!--/*--><![CDATA[/*><!--*/
+.addtoany_list.a2a_target{display:block;text-align:center;margin-top:1em;}
+
+/*]]>*/-->
+</style>
+<link type="text/css" rel="stylesheet" href="../sites/default/files/css/css_RVI95kbvU3ZEyQZTWpnpQ3FT6vVhhIo_ngc_c93FjNs.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500" media="all" />
+<link type="text/css" rel="stylesheet" href="../sites/default/files/css/css_vXvt0DBzVlIf-3cs_aiG0yLH6yT_ZSWmpec_qmUQYBE.css" media="all" />
+<link type="text/css" rel="stylesheet" href="../sites/default/files/css/css_FU8o5qSlzu0ob5FWyJ2aZa0IlDPx0rktUUmAbSxIXiw.css" media="all" />
+  <script type="text/javascript" src="../sites/default/files/js/js_ypadrG4kz9-JBpNOXmgjyVozLCJG_1RP3Ig-iqWR8n0.js"></script>
+<script type="text/javascript" src="../sites/default/files/js/js_TVTqjz8JHRb2KK9hlzuk0YsjzD013dKyYX_OTz-2VXU.js"></script>
+<script type="text/javascript" src="../sites/default/files/js/js_i9-mZxF1wrIj_pHo8CcygMfG3cz35Mlm6odAjzL19fk.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+var _paq = _paq || [];(function(){var u=(("https:" == document.location.protocol) ? "https://www.decodeproject.eu/piwik/" : "http://www.decodeproject.eu/piwik/");_paq.push(["setSiteId", "1"]);_paq.push(["setTrackerUrl", u+"piwik.php"]);_paq.push(["setDoNotTrack", 1]);_paq.push(["trackPageView"]);_paq.push(["setIgnoreClasses", ["no-tracking","colorbox"]]);_paq.push(["enableLinkTracking"]);var d=document,g=d.createElement("script"),s=d.getElementsByTagName("script")[0];g.type="text/javascript";g.defer=true;g.async=true;g.src=u+"piwik.js";s.parentNode.insertBefore(g,s);})();
+//--><!]]>
+</script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+window.a2a_config=window.a2a_config||{};window.da2a={done:false,html_done:false,script_ready:false,script_load:function(){var a=document.createElement('script'),s=document.getElementsByTagName('script')[0];a.type='text/javascript';a.async=true;a.src='https://static.addtoany.com/menu/page.js';s.parentNode.insertBefore(a,s);da2a.script_load=function(){};},script_onready:function(){da2a.script_ready=true;if(da2a.html_done)da2a.init();},init:function(){for(var i=0,el,target,targets=da2a.targets,length=targets.length;i<length;i++){el=document.getElementById('da2a_'+(i+1));target=targets[i];a2a_config.linkname=target.title;a2a_config.linkurl=target.url;if(el){a2a.init('page',{target:el});el.id='';}da2a.done=true;}da2a.targets=[];}};(function ($){Drupal.behaviors.addToAny = {attach: function (context, settings) {if (context !== document && window.da2a) {if(da2a.script_ready)a2a.init_all();da2a.script_load();}}}})(jQuery);a2a_config.callbacks=a2a_config.callbacks||[];a2a_config.callbacks.push({ready:da2a.script_onready});a2a_config.overlays=a2a_config.overlays||[];a2a_config.templates=a2a_config.templates||{};
+//--><!]]>
+</script>
+<script type="text/javascript" src="../sites/default/files/js/js_kb9AMFOJk8ALipMO9hfI2Xld92MCg5LBQTVr-GMkqy0.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"marmelo","theme_token":"4y11QxNYICr3AcBJjAgL2MSxP-MFMoujTbkmMt-cMac","js":{"0":1,"sites\/all\/modules\/eu_cookie_compliance\/js\/eu_cookie_compliance.js":1,"1":1,"sites\/all\/modules\/jquery_update\/replace\/jquery\/1.10\/jquery.min.js":1,"misc\/jquery-extend-3.4.0.js":1,"misc\/jquery-html-prefilter-3.5.0-backport.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/modules\/eu_cookie_compliance\/js\/jquery.cookie-1.4.1.min.js":1,"sites\/all\/modules\/matomo\/matomo.js":1,"2":1,"3":1,"sites\/all\/themes\/marmelo_base\/js\/vendor\/DecodeDrawer.js":1,"sites\/all\/themes\/marmelo_base\/js\/vendor\/MarmeloSlide.js":1,"sites\/all\/themes\/marmelo_base\/js\/vendor\/raf-polyfill.js":1,"sites\/all\/themes\/marmelo_base\/js\/vendor\/readmore.js":1,"sites\/all\/themes\/marmelo_base\/js\/vendor\/jquery.scrollTo.min.js":1,"sites\/all\/themes\/marmelo_base\/js\/canvas.js":1,"sites\/all\/themes\/marmelo_base\/js\/theme.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"modules\/field\/theme\/field.css":1,"modules\/node\/node.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/views\/css\/views.css":1,"sites\/all\/modules\/media\/modules\/media_wysiwyg\/css\/media_wysiwyg.base.css":1,"sites\/all\/modules\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/eu_cookie_compliance\/css\/eu_cookie_compliance.css":1,"0":1,"sites\/all\/modules\/date\/date_api\/date.css":1,"sites\/all\/modules\/addtoany\/addtoany.css":1,"https:\/\/fonts.googleapis.com\/css?family=Montserrat:300,400,500":1,"public:\/\/ctools\/css\/f623fca947872ccd2ba0c8065fd73eb4.css":1,"sites\/all\/themes\/marmelo_base\/css\/vendor\/hamburger.css":1,"sites\/all\/themes\/marmelo_base\/css\/styles.css":1}},"eu_cookie_compliance":{"cookie_policy_version":"1.0.0","popup_enabled":1,"popup_agreed_enabled":0,"popup_hide_agreed":0,"popup_clicking_confirmation":1,"popup_scrolling_confirmation":0,"popup_html_info":"\u003Cdiv class=\u0022eu-cookie-compliance-banner eu-cookie-compliance-banner-info eu-cookie-compliance-banner--default\u0022\u003E\n  \u003Cdiv class=\u0022popup-content info\u0022\u003E\n    \u003Cdiv id=\u0022popup-text\u0022\u003E\n      \u003Ch2\u003EWe use cookies on this site to enhance your user experience\u003C\/h2\u003E\n\u003Cp\u003EBy clicking any link on this page you are giving your consent for us to set cookies.\u003C\/p\u003E\n              \u003Cbutton type=\u0022button\u0022 class=\u0022find-more-button eu-cookie-compliance-more-button\u0022\u003ENo, give me more info\u003C\/button\u003E\n          \u003C\/div\u003E\n    \n    \u003Cdiv id=\u0022popup-buttons\u0022 class=\u0022\u0022\u003E\n      \u003Cbutton type=\u0022button\u0022 class=\u0022agree-button eu-cookie-compliance-default-button\u0022\u003EOK, I agree\u003C\/button\u003E\n          \u003C\/div\u003E\n  \u003C\/div\u003E\n\u003C\/div\u003E","use_mobile_message":false,"mobile_popup_html_info":"\u003Cdiv class=\u0022eu-cookie-compliance-banner eu-cookie-compliance-banner-info eu-cookie-compliance-banner--default\u0022\u003E\n  \u003Cdiv class=\u0022popup-content info\u0022\u003E\n    \u003Cdiv id=\u0022popup-text\u0022\u003E\n      \u003Ch2\u003EWe use cookies on this site to enhance your user experience\u003C\/h2\u003E\n\u003Cp\u003EBy tapping the Accept button, you agree to us doing so.\u003C\/p\u003E\n              \u003Cbutton type=\u0022button\u0022 class=\u0022find-more-button eu-cookie-compliance-more-button\u0022\u003ENo, give me more info\u003C\/button\u003E\n          \u003C\/div\u003E\n    \n    \u003Cdiv id=\u0022popup-buttons\u0022 class=\u0022\u0022\u003E\n      \u003Cbutton type=\u0022button\u0022 class=\u0022agree-button eu-cookie-compliance-default-button\u0022\u003EOK, I agree\u003C\/button\u003E\n          \u003C\/div\u003E\n  \u003C\/div\u003E\n\u003C\/div\u003E\n","mobile_breakpoint":768,"popup_html_agreed":"\u003Cdiv\u003E\n  \u003Cdiv class=\u0022popup-content agreed\u0022\u003E\n    \u003Cdiv id=\u0022popup-text\u0022\u003E\n      \u003Ch2\u003EThank you for accepting cookies\u003C\/h2\u003E\n\u003Cp\u003EYou can now hide this message or find out more about cookies.\u003C\/p\u003E\n    \u003C\/div\u003E\n    \u003Cdiv id=\u0022popup-buttons\u0022\u003E\n      \u003Cbutton type=\u0022button\u0022 class=\u0022hide-popup-button eu-cookie-compliance-hide-button\u0022\u003EHide\u003C\/button\u003E\n              \u003Cbutton type=\u0022button\u0022 class=\u0022find-more-button eu-cookie-compliance-more-button-thank-you\u0022 \u003EMore info\u003C\/button\u003E\n          \u003C\/div\u003E\n  \u003C\/div\u003E\n\u003C\/div\u003E","popup_use_bare_css":false,"popup_height":"auto","popup_width":"100%","popup_delay":1000,"popup_link":"\/privacy-policy","popup_link_new_window":1,"popup_position":null,"fixed_top_position":true,"popup_language":"en","store_consent":false,"better_support_for_screen_readers":0,"reload_page":0,"domain":"","domain_all_sites":null,"popup_eu_only_js":0,"cookie_lifetime":100,"cookie_session":false,"disagree_do_not_show_popup":0,"method":"default","allowed_cookies":"","withdraw_markup":"\u003Cbutton type=\u0022button\u0022 class=\u0022eu-cookie-withdraw-tab\u0022\u003EPrivacy settings\u003C\/button\u003E\n\u003Cdiv class=\u0022eu-cookie-withdraw-banner\u0022\u003E\n  \u003Cdiv class=\u0022popup-content info\u0022\u003E\n    \u003Cdiv id=\u0022popup-text\u0022\u003E\n      \u003Ch2\u003EWe use cookies on this site to enhance your user experience\u003C\/h2\u003E\n\u003Cp\u003EYou have given your consent for us to set cookies.\u003C\/p\u003E\n    \u003C\/div\u003E\n    \u003Cdiv id=\u0022popup-buttons\u0022\u003E\n      \u003Cbutton type=\u0022button\u0022 class=\u0022eu-cookie-withdraw-button\u0022\u003EWithdraw consent\u003C\/button\u003E\n    \u003C\/div\u003E\n  \u003C\/div\u003E\n\u003C\/div\u003E\n","withdraw_enabled":false,"withdraw_button_on_info_popup":false,"cookie_categories":[],"cookie_categories_details":[],"enable_save_preferences_button":true,"cookie_name":"","containing_element":"body","automatic_cookies_removal":true},"matomo":{"trackMailto":1}});
+//--><!]]>
+</script>
+  <meta name="viewport" content="width=device-width" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+</head>
+<body class="html not-front not-logged-in no-sidebars page-node page-node- page-node-213 node-type-article" >
+
+  <canvas id="background-canvas" width="100%" height="100%"> </canvas>
+
+  <button class="hamburger hamburger--vortex" type="button">
+    <span class="hamburger-box">
+      <span class="hamburger-inner"></span>
+    </span>
+  </button>
+
+  <div id="skip-link">
+    <a href="taking-control-over-personal-iot-data.html#main-content" class="element-invisible element-focusable">Skip to main content</a>
+  </div>
+
+
+    
+  <div id="page-wrapper"><div id="page">
+
+    <header><div class="section clearfix">
+
+              <a href="../index.html" title="Home" rel="home" id="logo">
+          <img src="../sites/all/themes/marmelo_base/img/logo.svg" alt="Home" />
+        </a>
+      
+      
+      
+        
+      <nav id='navigation'>
+        
+          <div class="region region-navigation">
+    <div id="block-menu-meganav-menu-meganav" class="block block-menu-meganav">
+
+    
+  <div class="content">
+    <div class='meganav'><ul class='menu'><li class='menu-item-1'><a href="../what-decode.html">The project</a><ul class='menu children_5'><a href='../what-decode.html'><li class=''><h5 class='title'>What is DECODE?</h5><p class='summary'>Find out more about the project and the technology behind it</p></li><a href='../team.html'><li class=''><h5 class='title'>The team</h5><p class='summary'>Meet the DECODE team</p></li><a href='../partners.html'><li class=''><h5 class='title'>The partners</h5><p class='summary'><p>DECODE is a consortium of 15&nbsp;organisations from across the European Union</p></p></li><a href='../have-more-questions.html'><li class=''><h5 class='title'>Have more questions?</h5><p class='summary'>Definitions and other useful information about the project</p></li><a href='../decode-advisory-group.html'><li class=''><h5 class='title'>DECODE Advisory Group</h5><p class='summary'><p>The DECODE Advisory Group kicks off in&nbsp;January 2018 after the second annual General Assembly</p></p></li></ul></li><li class='menu-item-2'><a href="../get-involved.html">Contact Us</a><ul class='menu children_5'><a href='../events.html'><li class=''><h5 class='title'>Events</h5><p class='summary'><p>Information about the events DECODE held&nbsp;across Europe</p></p></li><a href='../pilots.html'><li class=''><h5 class='title'>Pilots</h5><p class='summary'>Find out more about what happened in DECODE's pilots in Amsterdam or Barcelona</p></li><a href='../developers.html'><li class=''><h5 class='title'>For developers</h5><p class='summary'><p>Tools, code repositories and more</p></p></li><a href='../contact-us.html'><li class=''><h5 class='title'>Contact us</h5><p class='summary'>Get in touch</p></li></ul></li><li class='menu-item-3'><a href="../project-timeline.html">Our progress</a><ul class='menu children_6'><a href='../project-timeline.html'><li class=''><h5 class='title'>Project timeline</h5><p class='summary'><p>Overview of our progress to date and what is to come</p></p></li><a href='../decode-media.html'><li class=''><h5 class='title'>News</h5><p class='summary'><p>Read media and news articles about DECODE</p></p></li><a href='../blog.html'><li class=''><h5 class='title'>Blog</h5><p class='summary'>Thoughts from the DECODE team</p></li><a href='../deliverables.html'><li class=''><h5 class='title'>Project Deliverables</h5><p class='summary'>Read our project deliverables and other outputs about DECODE</p></li><a href='../resources.html'><li class=''><h5 class='title'>Resources</h5><p class='summary'><p>Videos, toolkits, comms resources and more from the DECODE project</p></p></li></ul></li></li></li><li class='menu-item-6'><a href="../events/beyond-surveillance-capitalism-reclaiming-digital-sovereignty.html">Symposium 2018</a><ul class='menu children_4'><a href='../events/beyond-surveillance-capitalism-reclaiming-digital-sovereignty.html'><li class=''><h5 class='title'>Overview</h5><p class='summary'>How can technology facilitate the transition from surveillance capitalism to an alternative project?</p></li><a href='../events/beyond-surveillance-capitalism-reclaiming-digital-sovereignty/speakers.html'><li class=''><h5 class='title'>Speakers</h5><p class='summary'>Who's speaking?</p></li><a href='../events/beyond-surveillance-capitalism-reclaiming-digital-sovereignty/media.html'><li class=''><h5 class='title'>Media</h5><p class='summary'>Explore videos, photos and other content from the event</p></li><a href='../events/beyond-surveillance-capitalism-reclaiming-digital-sovereignty/getting-here.html'><li class=''><h5 class='title'>Getting here</h5><p class='summary'>Getting to our venue, the Barcelona Contemporary Culture Centre</p></li></ul></li><li class='menu-item-7'><a href="../events/our-data-our-future-radical-tech-democratic-digital-society.html">Symposium 2019</a><ul class='menu children_3'><a href='../events/our-data-our-future-radical-tech-democratic-digital-society.html'><li class=''><h5 class='title'>Overview</h5><p class='summary'><p>Overview of the 2019 DECODE Symposium</p></p></li><a href='../events/speakers.html'><li class=''><h5 class='title'>Speakers</h5><p class='summary'><p>Who&#39;s speaking?</p></p></li><a href='https://decodeproject.eu/events/media'><li class=''><h5 class='title'>Media</h5><p class='summary'><p>Who&#39;s speaking?</p></p></li></ul></li></ul></div><div class='overlay'></div>  </div>
+</div>
+  </div>
+
+      </nav> <!-- /.section, /#navigation -->
+          
+
+    </div></header> <!-- /.section, /#header -->
+
+
+          <div id="breadcrumb"><h2 class="element-invisible">You are here</h2><div class="breadcrumb"><a href="../index.html">Home</a></div></div>
+    
+    
+    <div id="main-wrapper">
+        <div id="main" class="clearfix">
+
+            <section id="content" class="column"><div class="section">
+                                <a id="main-content"></a>
+                                <h1 class="title" id="page-title">Taking control over personal IoT data</h1>                                <div class="tabs"></div>                                                  <div class="region region-content">
+    <div id="block-system-main" class="block block-system">
+
+    
+  <div class="content">
+    <article id="node-213" class="node node-article clearfix" about="/blog/taking-control-over-personal-iot-data" typeof="sioc:Item foaf:Document">
+
+  
+      <span property="dc:title" content="Taking control over personal IoT data" class="rdf-meta element-hidden"></span>
+  
+  <div class="content">
+    <div class="field field-name-field-author field-type-text field-label-hidden"><div class="field-items"><div class="field-item even">Samuel Mulube</div></div></div><div class="field field-name-field-publication-date field-type-datetime field-label-hidden"><div class="field-items"><div class="field-item even"><span class="date-display-single" property="dc:date" datatype="xsd:dateTime" content="2018-04-18T00:00:00+01:00">Wednesday 18th April 2018</span></div></div></div><span class="a2a_kit a2a_target addtoany_list" id="da2a_1">
+      <a class="a2a_button_facebook a2a_counter"></a>
+<a class="a2a_button_twitter a2a_counter"></a>
+<a class="a2a_button_linkedin a2a_counter"></a>
+<a class="a2a_button_tumblr a2a_counter"></a>
+<a class="a2a_button_reddit"></a>
+<a class="a2a_button_slashdot"></a>
+      
+      
+    </span>
+    <script type="text/javascript">
+<!--//--><![CDATA[//><!--
+if(window.da2a)da2a.script_load();
+//--><!]]>
+</script><div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><p dir="ltr">In his 2015 talk <a href="http://idlewords.com/talks/haunted_by_data.htm">Haunted By Data</a>, Maciej Ceglowski convincingly argued the case that a lot of the way companies talk about personal or aggregated personal data is almost exactly wrong; rather than thinking about it as a pristine resource that flows in limpid streams, is pooled in data lakes, and then stored in the cloud; it's much more sensible to think about it as toxic waste or radioactive material that we don't yet know how to handle.</p>
+<p dir="ltr">This obviously applies to the data collected by social media platforms that users actively choose to share, as we are seeing at the moment with the ongoing debate around the possible use or misuse of personal data. However exactly the same concerns apply to the personal data collected, stored and transmitted by consumer Internet of Things (IoT) devices that more and more of us have within our homes. The qualitative difference between IoT data and the data actively shared by users is that often this data will be collected completely passively and unobtrusively. This means it's much harder for users to raise concerns about how personal data is being used when it's almost impossible to know what is being collected.</p>
+<h2 dir="ltr">What's the damage?</h2>
+<p dir="ltr">There have been a number of great examples of this over recent years ranging from the <a href="https://www.theguardian.com/technology/2017/mar/14/we-vibe-vibrator-tracking-users-sexual-habits">sex toy manufacturer</a> whose devices were collecting and storing intimate details of user's sexual habits without their consent, to connected <a href="https://www.troyhunt.com/data-from-connected-cloudpets-teddy-bears-leaked-and-ransomed-exposing-kids-voice-messages/">toys</a> or <a href="https://www.huffingtonpost.com.au/entry/hello-barbie-security-concerns_us_565c4921e4b072e9d1c24d22">dolls</a> that collected data from millions of children (including images, audio and private chats) and were then unfortunately hacked and these databases sold online. There was also the case of the <a href="https://www.theguardian.com/world/2018/jan/28/fitness-tracking-app-gives-away-location-of-secret-us-army-bases">fitness tracking app</a> that inadvertently leaked the locations and layouts of secret US army bases, as well as a recent slightly troubling story of a <a href="https://wolfstreet.com/2018/04/14/our-dental-insurance-sent-us-free-internet-connected-toothbrushes-and-this-is-what-happened-next/">dental insurer</a> whose business model appears to include sending free "smart" toothbrushes to end users and strongly encouraging them to install their app and share their brushing data.</p>
+<h2 dir="ltr">Why share at all?</h2>
+<p dir="ltr">A reasonable response to the above might be to say, why share any data at all? Despite the horror stories above, we at Thingful do still see value in creating aggregated datasets, whether it is to inform travel planning (c.f. Citymapper which was initially built using data provided by the Greater London Authority's open data store), to inform local government on issues like noise or air pollution, but we feel that the decision to contribute data to an aggregated dataset should belong to the user, not whoever happened to provide the user with a connected device.</p>
+<h2 dir="ltr">Our approach</h2>
+<p dir="ltr">At Thingful our part of the DECODE project was to try and explore some possible technical means by which control over personal IoT data might be shifted back into the hands of the end user. To do this we might identify the following principles:</p>
+<ul><li dir="ltr">
+<p dir="ltr">there must be a mechanism by which a user can claim and prove ownership of a specific device and control over the data it generates</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">users must be able to transfer or revoke their ownership of a device</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">when ownership of a device is transferred the new owner must not be able to access any data from the previous owner.</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">the provider of the device must not be able to see any data from the device without the user's explicit granted consent, and this may be revoked at any time</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">devices should use strong encryption techniques, and never store or transmit unencrypted data</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">users should be able to entitle specific third parties to receive data, but this should also use strong encryption techniques to ensure only the entitled party can read the data</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">users must be able to revoke access to other recipients at any point, after which point these recipients must not receive any new data.</p>
+</li>
+</ul><p dir="ltr">The approach we hope to take to explore this is to attempt to build a scale model of a system that uses existing tools being developed within the wider DECODE ecosystem to implement a solution that attempts to conform to the principles outlined above.</p>
+<h2 dir="ltr">How might this work?</h2>
+<ul><li dir="ltr">
+<p dir="ltr">In order for a user to claim and prove ownership of a device, we will use asymmetrical cryptography in that a device will be configured to not transmit any data to a cloud based data store until it has been configured with a public/private key pair for itself, as well as the public key for "owner" of the device. At this point it would be able to start uploading data encrypted with the owner's public key that only the owner would be able to decrypt. In addition after this association was set up the owner would be able to use other cryptographic primitives in order to prove that they had this link with the device (i.e. sign/verify a token).</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">Implement a workflow by which a device may be configured with additional public keys representing other data recipients with differential rights of access to the devices data. Data for these entitled additional recipients (representing aggregate datasets the user is choosing to share data with) could then be encrypted just for them and broadcast without to trust all of the parties between the device, and the intended recipient.</p>
+</li>
+<li dir="ltr">
+<p dir="ltr">Implement a UI for managing these interactions based on Wallet app that users would install on their mobile device. This Wallet UI would have to provide controls that let a user enable or disable access for specific recipient(s).</p>
+</li>
+</ul><h2 dir="ltr">Challenges Ahead</h2>
+<p dir="ltr">Our plan in developing the above scale model is to simulate the devices which would actually be generating the IoT data meaning we won't actually have to implement the full cryptographic flow within a device, however we do hope that the scale model we generate will have directly applicable learnings for at least one of the later pilots within the wider DECODE ecosystem.</p>
+<p dir="ltr">If you have any feedback or comments on the above, we can be reached on Twitter <a href="https://twitter.com/thingful">@thingful</a>, or I can be found <a href="https://twitter.com/smazero">@smazero</a>.</p>
+<p> </p>
+</div></div></div>  </div>
+
+  
+  
+</article>
+  </div>
+</div>
+  </div>
+                            </div></section> <!-- /.section, /#content -->
+
+            
+            
+        </div>
+    
+    </div> <!-- /#main, /#main-wrapper -->
+
+    <div id="footer"><div class="section">
+        <div class="region region-footer">
+    <div id="block-menu-block-1" class="block block-menu-block">
+
+    
+  <div class="content">
+    <div class="menu-block-wrapper menu-block-1 menu-name-menu-footer-menu parent-mlid-0 menu-level-1">
+  <ul class="menu"><li class="first leaf menu-mlid-552"><a href="../cookies.html" title="">Cookies</a></li>
+<li class="last leaf menu-mlid-553"><a href="../privacy-policy.html" title="">Privacy policy</a></li>
+</ul></div>
+  </div>
+</div>
+<div id="block-block-3" class="block block-block">
+
+    
+  <div class="content">
+    <p style="color: white;"><img alt="" src="../sites/default/files/eu-wout.png" style="width: 30px; height: 20px;" /> DECODE was funded by the European Union's Horizon 2020 Programme, under grant agreement number 732546.</p>
+<p style="color: white;">DECODE is a Europe-wide consortium. This website is managed on behalf of the consortium by the Dyne.org foundation, a not for profit organization established in 2005 with reg.num. 34237525 in The Netherlands. Haparandadam 7-A1, 1013AK Amsterdam</p>
+  </div>
+</div>
+  </div>
+    </div></div> <!-- /.section, /#footer -->
+
+  </div></div> <!-- /#page, /#page-wrapper -->
+  <script type="text/javascript">
+<!--//--><![CDATA[//><!--
+window.eu_cookie_compliance_cookie_name = "";
+//--><!]]>
+</script>
+<script type="text/javascript" src="../sites/default/files/js/js_lcej-wnhkuKN7X2sAkXYDMoQiGnYWSLvXW93M0RAg4Y.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+da2a.targets=[
+{title:"Taking control over personal IoT data",url:"https:\/\/www.decodeproject.eu\/blog\/taking-control-over-personal-iot-data"}];
+da2a.html_done=true;if(da2a.script_ready&&!da2a.done)da2a.init();da2a.script_load();
+//--><!]]>
+</script>
+</body>
+</html>
